@@ -1,3 +1,25 @@
+# domotic-zigbee
+
+Firmware de l'**ESP32-C6 #1** : gateway/coordinateur **Zigbee** du projet domotique.
+
+Basé sur l'exemple Espressif `Zigbee_On_Off_MultiSwitch` (JC V2), renommé en `zigbee-interface`.
+
+## Structure
+
+```
+zigbee-interface/
+├── zigbee-interface.ino   (sketch principal)
+├── ZigbeeHandlers.cpp
+├── serial_management.h    (liaison série avec l'autre ESP32-C6 WiFi)
+└── ci.json
+```
+
+> Pour l'IDE Arduino : ouvrir le dossier `zigbee-interface/` (le nom du dossier
+> doit correspondre au fichier .ino). Sélectionner la carte ESP32-C6 et le mode
+> Zigbee ZCZR (voir ci-dessous).
+
+---
+
 # Arduino-ESP32 Zigbee Multi-Switch Example
 
 This example demonstrates how to configure a Zigbee device as a multi-switch controller that can control up to three different Zigbee lights independently. The switch can operate in either coordinator or router mode, making it compatible with Home Assistant integration.
